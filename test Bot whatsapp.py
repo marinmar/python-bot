@@ -9,7 +9,7 @@ from selenium import webdriver
 import time
 import datetime 
 
-browser = webdriver.Firefox(executable_path=r'C:\Users\marin\Desktop\bot python\geckodriver.exe')
+browser = webdriver.Firefox(executable_path=r'C:\Users\***\Desktop\bot python\geckodriver.exe')
 browser.get('https://web.whatsapp.com')
 
 time.sleep(20)
@@ -19,15 +19,11 @@ Max=-9999
 
 last_message=""
 
-members=["Olivia","Cam Ly Rintz","Helene Marissal","Axelle Sander","Nathan Dermenjian","Aubin Lecoz","Emma Louise","Coraline Franceseti","marin"]
+members=[***]
 
 important=[]
 
 polls=[]
-
-#text_box = browser.find_element_by_xpath("//span[contains(@title, 'EL CHOCAMÁN')]")
-#print(text_box.text)
-
     
 def get_last_message(last_message):
     index=0
@@ -53,7 +49,7 @@ def commande(text,author):
         text_box.send_keys("successfully activated bot V1.1 For other commands see !help \n")
     if text[0:5]=="!help":
         text_box = browser.find_element_by_class_name("_3u328")
-        text_box.send_keys("Bienvenue sur le nouveau bot chocaman ! Voici quelques commandes utiles: \n")
+        text_box.send_keys("Bienvenue sur le nouveau bot ! Voici quelques commandes utiles: \n")
         time.sleep(2)
         text_box.send_keys("-> !important: Voici comment stocker les infos importantes du moment: taper important précédé d'un point d'exclamation, tapez votre texte puis ajouter un chiffre à la fin, un ou deux. Pour les afficher, tapez !important Le chiffre à la fin donne le délai d'expiration \n")
     if text[0:10]=="!important":
@@ -170,7 +166,7 @@ while True:
         author="marin"
         if len(text_list)==0:
             text_list=["null"]
-        if text_list[0] in ["Olivia","Cam Ly Rintz","Helene Marissal","Axelle Sander","Nathan Dermenjian","Aubin Lecoz","Emma Louise","Coraline Franceseti"]:
+        if text_list[0] in [***]:
             author=text_list[0]
             text_list=text_list[1:]
             if len(text_list)==0:
@@ -183,22 +179,5 @@ while True:
     time.sleep(1)
 
 
-
-
-
-
-
-
-#text_box.send_keys(response)
-
-
-#    text_box = browser.find_element_by_class_name("_3u328")
-#    now = datetime.datetime.now()
-#    minute=int(now.minute)
-#    hour=int(now.hour)
-#    if minute == hour:
-#        text_box.send_keys("Je bosse mon TD de physique !\n")
-#        time.sleep(60)
-        
-    
+           
     
